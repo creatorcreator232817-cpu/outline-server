@@ -1,0 +1,18 @@
+# Use Node base image
+FROM node:18
+
+# Create working directory
+WORKDIR /app
+
+# Copy everything
+COPY . .
+
+# Install dependencies (Outline uses Yarn)
+RUN npm install -g yarn
+RUN yarn install --ignore-engines
+
+# Expose the port Outline Manager connects to
+EXPOSE 80
+
+# Start Outline server manager
+CMD ["yarn", "start"]
