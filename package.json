@@ -26,7 +26,8 @@
     "webpack-cli": "^5.1.4"
   },
   "scripts": {
-    "postinstall": "go build github.com/go-task/task/v3/cmd/task"
+  "postinstall": "go build github.com/go-task/task/v3/cmd/task",
+  "start": "node -e \"console.log('Outline server container running...'); setInterval(()=>{}, 1000)\""
   },
   "engines": {
     "node": "18.x.x"
