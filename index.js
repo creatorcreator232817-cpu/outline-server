@@ -1,11 +1,6 @@
 const http = require("http");
 const port = process.env.PORT || 3000;
 
-const server = http.createServer((req, res) => {
-  res.writeHead(200, { "Content-Type": "text/plain" });
+http.createServer((req, res) => {
   res.end("Outline Server is Running ✅");
-});
-
-server.listen(port, () => {
-  console.log(`Server live on port ${port}`);
-});
+}).listen(port, () => console.log(`Server listening on port ${port}`));
